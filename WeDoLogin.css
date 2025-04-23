@@ -1,148 +1,73 @@
-
 body {
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #f4f4f4, #e0e0e0);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    overflow: hidden; 
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    padding: 20px;
   }
   
+  .phone-frame {
+    background-color: white;
+    width: 300px;
+    margin: auto;
+    padding: 15px;
+    border-radius: 30px;
+    border: 2px solid black;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  }
   
-  .login-container {
-    background: white;
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1), 0 8px 30px rgba(0, 0, 0, 0.08);
-    width: 100%;
-    max-width: 400px;
+  h2 {
     text-align: center;
-    position: relative;
-    animation: fadeIn 0.6s ease-in-out;
-  }
-  
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  
-  
-    .logo-img {
-        width: 100px;
-        height: auto;
-        margin-bottom: 20px;
-      }
-      
-
-  
-  
-  .title {
-    font-size: 24px;
-    margin-bottom: 30px;
-    color: #555;
-    line-height: 1.4;
-  }
-  
-  
-  .btn-container {
-    display: flex;
-    justify-content: space-between;
     margin-bottom: 20px;
-    gap: 10px; 
   }
   
-  .btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  .task {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    background-color: white;
   }
   
+  .task.done {
+    background-color: #c8e6c9;
+  }
   
-  .btn-user {
-    background-color: #4da6ff;
-    flex: 1;
-    padding: 15px;
-    border: none;
-    border-radius: 8px;
+  .task-name {
+    font-weight: bold;
+  }
+  
+  .date-box {
+    padding: 5px;
+    margin: 5px 0;
+    text-align: center;
+    border-radius: 5px;
     color: white;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-size: 16px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   }
   
-  .btn-user:hover {
-    background-color: #3399ff;
+  .date-yellow {
+    background-color: goldenrod;
   }
   
+  .date-red {
+    background-color: darkred;
+  }
   
-  .btn-admin {
-    background-color: #003d99;
-    flex: 1;
-    padding: 15px;
-    border: none;
-    border-radius: 8px;
+  .check-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #4CAF50;
     color: white;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
     font-size: 16px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
   }
   
-  .btn-admin:hover {
-    background-color: #002e73;
+  .extra-info {
+    margin-top: 5px;
+    font-size: 12px;
+    color: #555;
   }
-  
-  
-  a {
-    display: inline-block;
-    margin-top: 15px;
-    color: #333;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 14px;
-    transition: color 0.3s ease, text-decoration 0.3s ease;
-  }
-  
-  
-  a:hover {
-    color: #003d99;
-    text-decoration: underline;
-  }
-  
-  
-  @media (max-width: 600px) {
-    .login-container {
-      padding: 30px;
-      border-radius: 10px;
-    }
-  
-    .logo {
-      font-size: 24px;
-    }
-  
-    .title {
-      font-size: 20px;
-    }
-  
-    .btn {
-      font-size: 14px;
-      padding: 12px;
-    }
-  
-    a {
-      font-size: 13px;
-    }
-  }
-
