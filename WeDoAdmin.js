@@ -10,6 +10,13 @@ function toggleTaskList() {
     const li = createTaskElement(taskText);
     document.getElementById('taskItems').appendChild(li);
     document.getElementById('newTaskInput').value = '';
+
+    //Tallennus LocalStorageen//
+    const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+    tasks.push(taskText);
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+    //Talennuksen testi//
+    console.log("Tallennetut tehtävät:", localStorage.getItem('tasks'));
   }
   
   function createTaskElement(text) {
@@ -26,7 +33,10 @@ function toggleTaskList() {
     const deleteBtn = document.createElement('button');
     deleteBtn.textContent = 'Poista';
     deleteBtn.className = 'delete-btn';
-    deleteBtn.onclick = () => li.remove();
+    deleteBtn.onclick = () => {
+      removeTaskFromStorage(text);
+      li.remove();
+    };
   
     li.appendChild(taskSpan);
     li.appendChild(editBtn);
@@ -60,4 +70,19 @@ function toggleTaskList() {
   function shareList() {
     alert("Lista jaettu! (tässä voisi olla jakolinkin generointi)");
   }
-  
+
+  //Tallentaa edillisen kerran listan//
+  window.onload = function() {
+    const savedTasks = JSON.parse(localStorage.getItem('tasks')) || [];
+    savedTasks.forEach(taskText => {
+      const li = createTaskElement(taskText);
+      document.getElementById('taskItems').appendChild(li);
+    });
+  };
+
+  //Poistaa myös LocalStoragesta//
+  function removeTaskFromStorage(taskText) {
+    let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+    tasks = tasks.filter(t => t !== taskText);
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+  }
