@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>WeDo - Admin</title>
   <link rel="stylesheet" href="WeDoAdmin.css">
+  <script defer src="WeDoAdmin.js"></script>
 </head>
 <body>
   <div class="container">
@@ -18,6 +19,7 @@
     <div id="taskList" class="hidden">
       <h3>Tehtävälista</h3>
       <input type="text" id="newTaskInput" placeholder="Kirjoita uusi tehtävä">
+      <input type="date" id="newTaskDate">
       <button onclick="addTask()">Lisää tehtävä</button>
       <ul id="taskItems"></ul>
       <div class="share-code">
@@ -25,7 +27,6 @@
         <span id="shareCode">Koodi: 12345</span>
       </div>
     </div>
-    </div>
-  <script src="WeDoAdmin.js"></script>
+  </div>
 </body>
 </html>
