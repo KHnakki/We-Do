@@ -1,0 +1,43 @@
+body {
+    font-family: sans-serif;
+    background: #f2f2f2;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    max-width: 400px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 50px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  button {
+    padding: 10px;
+    border: none;
+    background: #007BFF;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px 5px 5px 0;
+  }
+  .task {
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    color: black;
+  }
+  .task.red { background-color: red; color: white; }
+  .task.yellow { background-color: yellow; }
+  .task.green { background-color: lightgreen; }
+  .hidden {
+    display: none;
+  }

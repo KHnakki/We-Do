@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <title>WeDo - Admin</title>
+  <link rel="stylesheet" href="WeDoAdmin.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Tervetuloa, Kasper Haapasaari</h2>
+    <button onclick="toggleTaskList()">Näytä tehtävät</button>
+
+    <div id="taskList" class="hidden">
+      <h3>Tehtävälista</h3>
+      <input type="text" id="newTaskInput" placeholder="Kirjoita uusi tehtävä">
+      <button onclick="addTask()">Lisää tehtävä</button>
+      <ul id="taskItems"></ul>
+      <div class="share-code">
+        <button onclick="shareList()">Jaa lista</button>
+        <span id="shareCode">Koodi: 12345</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="WeDoAdmin.js"></script>
+</body>
+</html>
