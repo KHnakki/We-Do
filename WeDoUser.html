@@ -1,16 +1,27 @@
-<!DOCTYPE html>
 <html lang="fi">
 <head>
   <meta charset="UTF-8">
-  <title>Tehtävälista</title>
-  <link rel="stylesheet" href="userf1.css">
+  <title>WeDo - Käyttäjä</title>
+  <link rel="stylesheet" href="WeDoUser.css">
+  <script src="WeDoUser.js"></script>
 </head>
 <body>
-  <div class="phone-frame">
+  <div class="container">
     <h2>Teho Lista</h2>
-    <div id="task-list"></div>
-  </div>
+    <ul id="taskList"></ul>
 
-  <script src="userf1.js"></script>
+    <div><ul id="taskListView"></ul></div>
+  
+  <div id="popupOverlay" class="popup-overlay hidden">
+    <div class="popup">
+      <div id="taskTitle" class="task-title">Tehtävän nimi</div>
+      <textarea id="commentBox" placeholder="Kommenttikenttä..."></textarea>
+      <div class="popup-buttons">
+        <button onclick="closeComment()">← BACK</button>
+        <button class="save-btn" onclick="markTaskDone()">✔</button>
+      </div>      
+    </div>
+  </div>
+  
 </body>
 </html>

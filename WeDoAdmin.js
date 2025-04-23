@@ -25,6 +25,19 @@ function toggleTaskList() {
     const taskSpan = document.createElement('span');
     taskSpan.textContent = text;
   
+    const commentInfo = document.createElement('div');
+    commentInfo.className = 'comment-info';
+  
+    // Hae mahdollinen valmis kommentti
+    const completed = JSON.parse(localStorage.getItem('completedTasks')) || {};
+    if (completed[text]) {
+      const commentText = document.createElement('p');
+      commentText.textContent = `Kommentti: ${completed[text]}`;
+      commentText.style.fontStyle = 'italic';
+      commentText.style.color = 'green';
+      commentInfo.appendChild(commentText);
+    }
+  
     const editBtn = document.createElement('button');
     editBtn.textContent = 'Muokkaa';
     editBtn.className = 'edit-btn';
@@ -41,9 +54,11 @@ function toggleTaskList() {
     li.appendChild(taskSpan);
     li.appendChild(editBtn);
     li.appendChild(deleteBtn);
+    li.appendChild(commentInfo);
   
     return li;
   }
+  
   
   function editTask(taskSpan, li) {
     const currentText = taskSpan.textContent;
@@ -86,3 +101,14 @@ function toggleTaskList() {
     tasks = tasks.filter(t => t !== taskText);
     localStorage.setItem('tasks', JSON.stringify(tasks));
   }
+
+  // Näytä olemassa olevat tehtävät
+  window.onload = function() {
+    const savedTasks = JSON.parse(localStorage.getItem('tasks')) || [];
+    savedTasks.forEach(taskText => {
+      const li = createTaskElement(taskText);
+      document.getElementById('taskItems').appendChild(li);
+    });
+
+  };
+  
