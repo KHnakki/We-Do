@@ -3,13 +3,12 @@
   <meta charset="UTF-8">
   <title>WeDo - Käyttäjä</title>
   <link rel="stylesheet" href="WeDoUser.css">
+  <script src="WeDoUser.js"></script>
 </head>
 <body>
   <div class="container">
     <h2>Teho Lista</h2>
-    <div class="task red">Astianpesu - 15.5.2025 <button onclick="openComment('Astianpesu')">Kommentoi</button></div>
-    <div class="task yellow">Imurointi - 18.5.2025 <button onclick="openComment('Imurointi')">Kommentoi</button></div>
-    <div class="task green">Vessan pesu - 18.5.2025 <button onclick="openComment('Vessan pesu')">Kommentoi</button></div>
+    <ul id="taskList"></ul>
 
     <div id="commentSection" class="hidden">
       <h3>Kommenttikenttä</h3>
@@ -17,10 +16,8 @@
       <div class="btn-group">
         <button onclick="saveComment()">Tallenna</button>
         <button onclick="closeComment()">Takaisin</button>
-        <button onclick="logout()">Kirjaudu ulos</button>
       </div>
     </div>
   </div>
-  <script src="WeDoUser.js"></script>
 </body>
 </html>
