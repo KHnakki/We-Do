@@ -10,14 +10,18 @@
     <h2>Teho Lista</h2>
     <ul id="taskList"></ul>
 
-    <div id="commentSection" class="hidden">
-      <h3>Kommenttikenttä</h3>
-      <textarea id="commentBox" placeholder="Kirjoita kommentti..."></textarea>
-      <div class="btn-group">
-        <button onclick="saveComment()">Tallenna</button>
-        <button onclick="closeComment()">Takaisin</button>
+    <div><ul id="taskListView"></ul></div>
+  
+  <div id="popupOverlay" class="popup-overlay hidden">
+    <div class="popup">
+      <div id="taskTitle" class="task-title">Tehtävän nimi</div>
+      <textarea id="commentBox" placeholder="Kommenttikenttä..."></textarea>
+      <div class="popup-buttons">
+        <button onclick="closeComment()">← BACK</button>
+        <button class="save-btn" onclick="saveComment()">✔</button>
       </div>
     </div>
   </div>
+  
 </body>
 </html>
