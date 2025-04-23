@@ -86,3 +86,18 @@ body {
   .hidden {
     display: none;
   }
+ .phone-frame {
+    background-color: white;
+    width: 300px;
+    margin: auto;
+    padding: 15px;
+    border-radius: 30px;
+    border: 2px solid black;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+ }
+    h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    }
+    
+           
