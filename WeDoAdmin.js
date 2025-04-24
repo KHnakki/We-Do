@@ -106,8 +106,17 @@ function shareList() {
 
 window.onload = function () {
   const savedTasks = JSON.parse(localStorage.getItem('tasks')) || [];
+  const completed = JSON.parse(localStorage.getItem('completedTasks')) || [];
+
+  const listElement = document.getElementById('taskItems');
+  listElement.innerHTML = "";
+
   savedTasks.forEach(task => {
+    if (completed[task.name]) {
+      task.done = true;
+    }
+
     const li = createTaskElement(task);
-    document.getElementById('taskItems').appendChild(li);
+    listElement.appendChild(li);
   });
 };
