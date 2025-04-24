@@ -41,6 +41,7 @@ function createTaskElement(taskObj) {
     commentText.style.fontStyle = 'italic';
     commentText.style.color = 'green';
     commentInfo.appendChild(commentText);
+    li.style.backgroundColor = '#d4edda';
   }
 
   const editBtn = document.createElement('button');
