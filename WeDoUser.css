@@ -1,8 +1,7 @@
 body {
-    font-family: sans-serif;
-    background: #f2f2f2;
-    margin: 0;
-    padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  padding: 20px;
   }
   .container {
     max-width: 400px;
@@ -29,11 +28,16 @@ body {
     cursor: pointer;
     margin: 5px 5px 5px 0;
   }
-  .task {
-    padding: 10px;
-    margin-top: 10px;
-    border-radius: 5px;
-    color: black;
+.task {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  position: relative;
+  background-color: white;
+}
+.task-name {
+    font-weight: bold;
   }
   .task.red { background-color: red; color: white; }
   .task.yellow { background-color: yellow; }
@@ -41,7 +45,22 @@ body {
   .hidden {
     display: none;
   }
-
+.task-name {
+  font-weight: bold;
+}
+.date-box {
+  padding: 5px;
+  margin: 5px 0;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+}
+.date-yellow {
+  background-color: goldenrod;
+}
+.date-red {
+  background-color: darkred;
+}
   .popup-overlay {
     position: fixed;
     top: 0; left: 0;
@@ -87,17 +106,53 @@ body {
     display: none;
   }
  .phone-frame {
-    background-color: white;
-    width: 300px;
-    margin: auto;
-    padding: 15px;
-    border-radius: 30px;
-    border: 2px solid black;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  background-color: white;
+  width: 300px;
+  margin: auto;
+  padding: 15px;
+  border-radius: 30px;
+  border: 2px solid black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
  }
     h2 {
     text-align: center;
     margin-bottom: 20px;
     }
-    
-           
+
+    }
+  
+  .check-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+.date-box {
+    padding: 5px;
+    margin: 5px 0;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+  }
+  
+  .date-yellow {
+    background-color: goldenrod;
+  }
+  
+  .date-red {
+    background-color: darkred;
+  }
+      .extra-info {
+    margin-top: 5px;
+    font-size: 12px;
+    color: #555;
+  }
+  
