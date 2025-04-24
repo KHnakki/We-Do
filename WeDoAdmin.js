@@ -103,12 +103,20 @@ function toggleTaskList() {
   }
 
   // Näytä olemassa olevat tehtävät
-  window.onload = function() {
-    const savedTasks = JSON.parse(localStorage.getItem('tasks')) || [];
-    savedTasks.forEach(taskText => {
-      const li = createTaskElement(taskText);
-      document.getElementById('taskItems').appendChild(li);
-    });
+window.onload = function () {
+  const savedTasks = JSON.parse(localStorage.getItem('tasks')) || [];
+  const completed = JSON.parse(localStorage.getItem('completedTasks')) || [];
 
-  };
+  const listElement = document.getElementById('taskItems');
+  listElement.innerHTML = "";
+
+  savedTasks.forEach(task => {
+    if (completed[task.name]) {
+      task.done = true;
+    }
+
+    const li = createTaskElement(task);
+    listElement.appendChild(li);
+  });
+};
   
