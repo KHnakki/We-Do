@@ -9,7 +9,11 @@
 <body>
   <div class="container">
     <h2>Teho Lista</h2>
-    <div id="task-list"></div>
+    <div id="task-list"></div>  <select id="filterTasks" onchange="renderTasks()">
+      <option value="all">Kaikki tehtävät</option>
+      <option value="active">Vain tekemättömät</option>
+      <option value="done">Vain valmiit</option>
+    </select>
   </div>
 
   <div id="popupOverlay" class="popup-overlay hidden">
@@ -24,4 +28,3 @@
   </div>
 </body>
 </html>
-
