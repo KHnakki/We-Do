@@ -8,20 +8,23 @@
 </head>
 <body>
   <div class="container">
-    <h2>Tervetuloa, Kasper Haapasaari</h2>
+    <h2>Tervetuloa</h2>
   
-    <button>
-      <a href="LoginWeDo.html" class="button">Takaisin</a>
-    </button>
-
-    <button onclick="toggleTaskList()">Näytä tehtävät</button>
+    <button><a href="LoginWeDo.html" class="button">Takaisin</a></button>
+    <button onclick="toggleTaskList()">Näytä ja lisää tehtävät</button>
+    <button onclick="toggleCompleted()" class="back-btn">Näytä valmiit tehtävät</button>
+    <ul id="completedItems" class="hidden"></ul>
 
     <div id="taskList" class="hidden">
       <h3>Tehtävälista</h3>
       <input type="text" id="newTaskInput" placeholder="Kirjoita uusi tehtävä">
-      <input type="date" id="newTaskDate">
+      <input type="date" id="newTaskDate" placeholder="Lisää päivämäärä (valinneinen)">
+      <textarea id="newTaskDescription" placeholder="Kuvaus (valinneinen)"></textarea>
       <button onclick="addTask()">Lisää tehtävä</button>
+
+      <h4>Tehtävät</h4>
       <ul id="taskItems"></ul>
+
       <div class="share-code">
         <button onclick="shareList()">Jaa lista</button>
         <span id="shareCode">Koodi: 12345</span>
