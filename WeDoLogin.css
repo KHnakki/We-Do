@@ -1,147 +1,63 @@
+.login-container {
+  background-color: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  margin: 40px auto;
+  text-align: center;
+}
 
-body {
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #f4f4f4, #e0e0e0);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    overflow: hidden; 
-  }
-  
-  
+input[type="text"], input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.login-btn {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 12px;
+  margin-top: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  background-color: #45a049;
+}
+
+.logo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logo-img {
+  max-width: 100px;
+  height: auto;
+}
+
+@media (max-width: 400px) {
   .login-container {
-    background: white;
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1), 0 8px 30px rgba(0, 0, 0, 0.08);
-    width: 100%;
-    max-width: 400px;
-    text-align: center;
-    position: relative;
-    animation: fadeIn 0.6s ease-in-out;
+    width: 90%;
+    padding: 20px;
   }
-  
-  
-  @keyframes fadeIn {   
-    from {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  
-  
-    .logo-img {
-        width: 100px;
-        height: auto;
-        margin-bottom: 20px;
-      }
-      
+}
 
-  
-  
-  .title {
-    font-size: 24px;
-    margin-bottom: 30px;
-    color: #555;
-    line-height: 1.4;
-  }
-  
-  
-  .btn-container {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-    gap: 10px; 
-  }
-  
-  .btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-  }
-  
-  
-  .btn-user {
-    background-color: #4da6ff;
-    flex: 1;
-    padding: 15px;
-    border: none;
-    border-radius: 8px;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-size: 16px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .btn-user:hover {
-    background-color: #3399ff;
-  }
-  
-  
-  .btn-admin {
-    background-color: #003d99;
-    flex: 1;
-    padding: 15px;
-    border: none;
-    border-radius: 8px;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-size: 16px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .btn-admin:hover {
-    background-color: #002e73;
-  }
-  
-  
-  a {
-    display: inline-block;
-    margin-top: 15px;
-    color: #333;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 14px;
-    transition: color 0.3s ease, text-decoration 0.3s ease;
-  }
-  
-  
-  a:hover {
-    color: #003d99;
-    text-decoration: underline;
-  }
-  
-  
-  @media (max-width: 600px) {
-    .login-container {
-      padding: 30px;
-      border-radius: 10px;
-    }
-  
-    .logo {
-      font-size: 24px;
-    }
-  
-    .title {
-      font-size: 20px;
-    }
-  
-    .btn {
-      font-size: 14px;
-      padding: 12px;
-    }
-  
-    a {
-      font-size: 13px;
-    }
-  }
+.btn-user, .btn-admin {
+  display: inline-block;
+  background-color: #007BFF;
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+  margin: 10px 5px;
+}
+
+.btn-user:hover, .btn-admin:hover {
+  background-color: #0056b3;
+}
